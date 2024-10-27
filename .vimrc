@@ -42,4 +42,5 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 " Others
 set number
+set shiftwidth=4 smarttab
 
