@@ -6,7 +6,7 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 
 " Languages
-" Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'ollykel/v-vim'
 
 " LSP
@@ -15,10 +15,10 @@ Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
-" Rust Plugins Settings
-" syntax enable
-" filetype plugin indent on
-" let g:rustfmt_autosave = 1
+Rust Plugins Settings
+syntax enable
+filetype plugin indent on
+let g:rustfmt_autosave = 1
 
 " Lightline Settings
 set laststatus=2
