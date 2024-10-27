@@ -15,7 +15,7 @@ Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
-Rust Plugins Settings
+" Rust Plugins Settings
 syntax enable
 filetype plugin indent on
 let g:rustfmt_autosave = 1
