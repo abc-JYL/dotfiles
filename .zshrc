@@ -112,3 +112,15 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+eval "$(zoxide init zsh)"
+alias cd=z
+
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/jeremy/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
