@@ -115,12 +115,3 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 alias cd=z
 
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/jeremy/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<

@@ -130,13 +130,13 @@ return {
                     type = "button",
                     val = "  󰅚  Quit NVIM",
                     on_press = function()
-                        vim.cmd.q()
+                        vim.cmd.qa()
                     end,
                     opts = {
                         shortcut = "    q",
                         align_shortcut = "right",
                         hl_shortcut = "GlowOrangeHLGroup",
-                        keymap = { "n", "q", ":q<cr>" },
+                        keymap = { "n", "q", ":qa<cr>" },
                         position = "center"
                     }
                 }

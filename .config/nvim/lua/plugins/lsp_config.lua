@@ -1,12 +1,20 @@
 return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPost", "BufNewFile" },
+    dependencies = {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+    },
 
     config = function()
-        local lspconfig = require("lspconfig")
+        local lspconfig = require("mason-lspconfig")
+        lspconfig.setup()
 
-        lspconfig.clangd.setup({})
-        lspconfig.gopls.setup({})
+        lspconfig.setup_handlers({
+            function(server_name)
+                require("lspconfig")[server_name].setup({})
+            end
+        })
     end
 }
 
