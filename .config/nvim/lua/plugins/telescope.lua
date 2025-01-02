@@ -1,6 +1,6 @@
 return {
     "nvim-telescope/telescope.nvim",
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = { 'nvim-lua/plenary.nvim', "nvim-telescope/telescope-media-files.nvim", "folke/noice.nvim" },
     lazy = true,
     cmd = "Telescope",
     keys = {
@@ -11,7 +11,7 @@ return {
     },
     opts = {},
     config = function()
-        require("telescope").load_extension("noice")
+        require("plugins.configs.telescope")
     end
 }
 

@@ -18,14 +18,11 @@ return {
         { "neovim/nvim-lspconfig" }
     },
     init = function()
-        vim.g.coq_settings = {
-            -- auto_start = true, -- if you want to start COQ at startup
-            -- Your COQ settings here
-        }
+        require("plugins.configs.coq")
     end,
     config = function()
         -- Your LSP settings here
-        vim.cmd("COQnow -s")
+        require("plugins.configs.coq.config")
     end,
 }
 

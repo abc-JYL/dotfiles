@@ -1,6 +1,9 @@
 return {
     'mfussenegger/nvim-dap',
-    event = "VeryLazy",
+    event = { "BufReadPost" },
+    dependencies = {
+        "williamboman/mason-lspconfig.nvim"
+    },
     config = function()
         vim.keymap.set('n', '<leader>c', function() require('dap').continue() end)
         vim.keymap.set('n', '<leader>n', function() require('dap').step_over() end)
