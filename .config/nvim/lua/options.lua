@@ -1,3 +1,5 @@
+vim.opt.mouse = 'a'
+
 -- Line configs
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -32,4 +34,18 @@ vim.opt.termguicolors = true
 
 -- Set the leader key
 vim.g.mapleader = " "
+
+-- Netrw
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize = 20
+
+-- Disable the highligh for search
+vim.opt.hlsearch = false
+
+-- Lsp Config
+vim.o.completeopt = "menu,menuone,noselect"
+vim.o.omnifunc="syntaxcomplete#Complete"
+
+vim.o.showmode = false
 
