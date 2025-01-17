@@ -1,6 +1,3 @@
--- Telescope
-vim.keymap.set('n', '<leader>ff', "<cmd>FZF<cr>", { desc = 'Telescope find files' })
-
 -- Completion (Also bind <C-Space> to <C-X><C-O>)
 local imap_expr = function(lhs, rhs)
     vim.keymap.set('i', lhs, rhs, { expr = true })
