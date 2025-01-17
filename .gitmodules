@@ -4,3 +4,6 @@
 [submodule ".config/nvim/pack/vendor/start/kanagawa"]
 	path = .config/nvim/pack/vendor/start/kanagawa
 	url = https://github.com/rebelot/kanagawa.nvim
+[submodule ".config/nvim/pack/vendor/start/treesitter"]
+	path = .config/nvim/pack/vendor/start/treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
