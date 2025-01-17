@@ -1,0 +1,6 @@
+[submodule ".config/nvim/.config/nvim/pack/vendor/start/kanagawa"]
+	path = .config/nvim/.config/nvim/pack/vendor/start/kanagawa
+	url = https://github.com/rebelot/kanagawa.nvim
+[submodule ".config/nvim/pack/vendor/start/kanagawa"]
+	path = .config/nvim/pack/vendor/start/kanagawa
+	url = https://github.com/rebelot/kanagawa.nvim
