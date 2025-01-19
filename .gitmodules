@@ -7,3 +7,6 @@
 [submodule ".config/nvim/pack/vendor/start/treesitter"]
 	path = .config/nvim/pack/vendor/start/treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule ".config/nvim/pack/vendor/start/treesitter-textobjects"]
+	path = .config/nvim/pack/vendor/start/treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
