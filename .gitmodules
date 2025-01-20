@@ -10,3 +10,6 @@
 [submodule ".config/nvim/pack/vendor/start/treesitter-textobjects"]
 	path = .config/nvim/pack/vendor/start/treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
+[submodule ".config/nvim/.config/nvim/pack/vendor/start/kanagawa.nvim"]
+	path = .config/nvim/.config/nvim/pack/vendor/start/kanagawa.nvim
+	url = https://github.com/rebelot/kanagawa.nvim

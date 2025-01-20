@@ -1,4 +1,4 @@
-local plugin_path = vim.fn.stdpath("config").."/pack/vendor/start/"
+local plugin_path = vim.fn.stdpath("data").."/site/pack/vendor/start/"
 
 local function add(url)
     local path = url:match("([^/\\]+)$")
