@@ -46,7 +46,7 @@ vim.opt.hlsearch = false
 -- Lsp Config
 -- vim.o.completeopt = "menu,menuone,noselect"
 vim.o.completeopt = "menu,menuone,popup,fuzzy,noselect"
-vim.o.omnifunc="syntaxcomplete#Complete"
-
+-- vim.o.omnifunc="syntaxcomplete#Complete"
+--
 vim.o.showmode = false
 

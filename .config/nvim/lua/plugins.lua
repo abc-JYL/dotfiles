@@ -1,4 +1,27 @@
+local plugin_path = vim.fn.stdpath("config").."/pack/vendor/start/"
+
+local function add(url)
+    local path = url:match("([^/\\]+)$")
+    if not (vim.uv or vim.loop).fs_stat(plugin_path..path) then
+        local out = vim.fn.system({"git", "clone", "https://github.com/"..url, plugin_path..path})
+        if vim.v.shell_error ~= 0 then
+            vim.api.nvim_echo({
+                { "Failed to clone plugin:\n", "ErrorMsg" },
+                { out, "WarningMsg" },
+                { "\nPress any key to exit..." },
+            }, true, {})
+            vim.fn.getchar()
+            os.exit(1)
+        end
+        vim.cmd('packloadall! | helptags ALL')
+    end
+end
+
+add("rebelot/kanagawa.nvim")
 require("kanagawa").load()
+
+add("nvim-treesitter/nvim-treesitter")
+add("nvim-treesitter/nvim-treesitter-textobjects")
 
 require("nvim-treesitter.configs").setup({
     ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },

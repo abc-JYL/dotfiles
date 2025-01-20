@@ -1,4 +1,4 @@
-function _G.lsp_diagnostics_statusline()
+local function lsp_diagnostics()
   local buf = vim.api.nvim_get_current_buf()
   local diagnostics = vim.diagnostic.get(buf)
 
@@ -36,7 +36,7 @@ function _G.lsp_diagnostics_statusline()
   return status ~= "" and status or ""
 end
 
-function _G.current_mode()
+local function current_mode()
   local mode_map = {
     ['n'] = 'NORMAL',
     ['i'] = 'INSERT',
@@ -51,7 +51,7 @@ function _G.current_mode()
     return mode_map[vim.fn.mode()]
 end
 
-function _G.lsp_status()
+local function lsp_status()
     local attached_clients = vim.lsp.get_clients({ bufnr = 0 })
     if #attached_clients == 0 then
         return ""
@@ -65,23 +65,25 @@ function _G.lsp_status()
     return "[" .. table.concat(names, ", ") .. "]"
 end
 
-vim.cmd.highlight("StatusLine guibg=#42455a")
-vim.cmd.highlight("Mode guibg=#23395d")
+vim.cmd.highlight("StatusLineBG guibg=#42455a")
+vim.cmd.highlight("ModeBG guibg=#23395d")
 
-local statusline = {
-    "%#mode#",
-    " %{v:lua.current_mode()} ",
-    "%#statusline# ",
-    "%{v:lua.lsp_diagnostics_statusline()}",
-    '%t ',
-    '%r',
-    '%m',
-    '%=',
-    "%{v:lua.lsp_status()}",
-    ' %{&filetype}',
-    ' %2p%%',
-    '%3l:%-2c '
-}
+function _G.statusline()
+    return table.concat({
+        "%#modebg#",
+        current_mode(),
+        "%#statuslinebg#",
+        lsp_diagnostics(),
+        '%t ',
+        '%r',
+        '%m',
+        '%=',
+        lsp_status(),
+        ' %{&filetype}',
+        ' %2p%%',
+        '%3l:%-2c '
+    }, " ")
+end
 
-vim.o.statusline = table.concat(statusline, '')
+vim.o.statusline = "%{%v:lua._G.statusline()%}"
 
